@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A8AD69661B97589200876333 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AD69651B97589200876333 /* AppDelegate.swift */; };
+		A8AD69681B97589200876333 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AD69671B97589200876333 /* ViewController.swift */; };
+		A8AD696B1B97589200876333 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8AD69691B97589200876333 /* Main.storyboard */; };
+		A8AD696D1B97589200876333 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8AD696C1B97589200876333 /* Assets.xcassets */; };
+		A8AD69701B97589200876333 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8AD696E1B97589200876333 /* LaunchScreen.storyboard */; };
+		A8AD697B1B97589300876333 /* Horoscope_HAMIITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AD697A1B97589300876333 /* Horoscope_HAMIITests.swift */; };
+		A8AD69861B97589300876333 /* Horoscope_HAMIIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AD69851B97589300876333 /* Horoscope_HAMIIUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A8AD69771B97589300876333 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8AD695A1B97589200876333 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8AD69611B97589200876333;
+			remoteInfo = Horoscope_HAMII;
+		};
+		A8AD69821B97589300876333 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8AD695A1B97589200876333 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8AD69611B97589200876333;
+			remoteInfo = Horoscope_HAMII;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A8AD69621B97589200876333 /* Horoscope_HAMII.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Horoscope_HAMII.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8AD69651B97589200876333 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A8AD69671B97589200876333 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A8AD696A1B97589200876333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A8AD696C1B97589200876333 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A8AD696F1B97589200876333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A8AD69711B97589200876333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8AD69761B97589300876333 /* Horoscope_HAMIITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Horoscope_HAMIITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8AD697A1B97589300876333 /* Horoscope_HAMIITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horoscope_HAMIITests.swift; sourceTree = "<group>"; };
+		A8AD697C1B97589300876333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8AD69811B97589300876333 /* Horoscope_HAMIIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Horoscope_HAMIIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8AD69851B97589300876333 /* Horoscope_HAMIIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horoscope_HAMIIUITests.swift; sourceTree = "<group>"; };
+		A8AD69871B97589300876333 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A8AD695F1B97589200876333 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8AD69731B97589300876333 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8AD697E1B97589300876333 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A8AD69591B97589200876333 = {
+			isa = PBXGroup;
+			children = (
+				A8AD69641B97589200876333 /* Horoscope_HAMII */,
+				A8AD69791B97589300876333 /* Horoscope_HAMIITests */,
+				A8AD69841B97589300876333 /* Horoscope_HAMIIUITests */,
+				A8AD69631B97589200876333 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A8AD69631B97589200876333 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A8AD69621B97589200876333 /* Horoscope_HAMII.app */,
+				A8AD69761B97589300876333 /* Horoscope_HAMIITests.xctest */,
+				A8AD69811B97589300876333 /* Horoscope_HAMIIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A8AD69641B97589200876333 /* Horoscope_HAMII */ = {
+			isa = PBXGroup;
+			children = (
+				A8AD69651B97589200876333 /* AppDelegate.swift */,
+				A8AD69671B97589200876333 /* ViewController.swift */,
+				A8AD69691B97589200876333 /* Main.storyboard */,
+				A8AD696C1B97589200876333 /* Assets.xcassets */,
+				A8AD696E1B97589200876333 /* LaunchScreen.storyboard */,
+				A8AD69711B97589200876333 /* Info.plist */,
+			);
+			path = Horoscope_HAMII;
+			sourceTree = "<group>";
+		};
+		A8AD69791B97589300876333 /* Horoscope_HAMIITests */ = {
+			isa = PBXGroup;
+			children = (
+				A8AD697A1B97589300876333 /* Horoscope_HAMIITests.swift */,
+				A8AD697C1B97589300876333 /* Info.plist */,
+			);
+			path = Horoscope_HAMIITests;
+			sourceTree = "<group>";
+		};
+		A8AD69841B97589300876333 /* Horoscope_HAMIIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A8AD69851B97589300876333 /* Horoscope_HAMIIUITests.swift */,
+				A8AD69871B97589300876333 /* Info.plist */,
+			);
+			path = Horoscope_HAMIIUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A8AD69611B97589200876333 /* Horoscope_HAMII */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8AD698A1B97589300876333 /* Build configuration list for PBXNativeTarget "Horoscope_HAMII" */;
+			buildPhases = (
+				A8AD695E1B97589200876333 /* Sources */,
+				A8AD695F1B97589200876333 /* Frameworks */,
+				A8AD69601B97589200876333 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Horoscope_HAMII;
+			productName = Horoscope_HAMII;
+			productReference = A8AD69621B97589200876333 /* Horoscope_HAMII.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A8AD69751B97589300876333 /* Horoscope_HAMIITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8AD698D1B97589300876333 /* Build configuration list for PBXNativeTarget "Horoscope_HAMIITests" */;
+			buildPhases = (
+				A8AD69721B97589300876333 /* Sources */,
+				A8AD69731B97589300876333 /* Frameworks */,
+				A8AD69741B97589300876333 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8AD69781B97589300876333 /* PBXTargetDependency */,
+			);
+			name = Horoscope_HAMIITests;
+			productName = Horoscope_HAMIITests;
+			productReference = A8AD69761B97589300876333 /* Horoscope_HAMIITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A8AD69801B97589300876333 /* Horoscope_HAMIIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8AD69901B97589300876333 /* Build configuration list for PBXNativeTarget "Horoscope_HAMIIUITests" */;
+			buildPhases = (
+				A8AD697D1B97589300876333 /* Sources */,
+				A8AD697E1B97589300876333 /* Frameworks */,
+				A8AD697F1B97589300876333 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8AD69831B97589300876333 /* PBXTargetDependency */,
+			);
+			name = Horoscope_HAMIIUITests;
+			productName = Horoscope_HAMIIUITests;
+			productReference = A8AD69811B97589300876333 /* Horoscope_HAMIIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A8AD695A1B97589200876333 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = HAM;
+				TargetAttributes = {
+					A8AD69611B97589200876333 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = GDB3SZ2MTH;
+					};
+					A8AD69751B97589300876333 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = GDB3SZ2MTH;
+						TestTargetID = A8AD69611B97589200876333;
+					};
+					A8AD69801B97589300876333 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = GDB3SZ2MTH;
+						TestTargetID = A8AD69611B97589200876333;
+					};
+				};
+			};
+			buildConfigurationList = A8AD695D1B97589200876333 /* Build configuration list for PBXProject "Horoscope_HAMII" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A8AD69591B97589200876333;
+			productRefGroup = A8AD69631B97589200876333 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A8AD69611B97589200876333 /* Horoscope_HAMII */,
+				A8AD69751B97589300876333 /* Horoscope_HAMIITests */,
+				A8AD69801B97589300876333 /* Horoscope_HAMIIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A8AD69601B97589200876333 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8AD69701B97589200876333 /* LaunchScreen.storyboard in Resources */,
+				A8AD696D1B97589200876333 /* Assets.xcassets in Resources */,
+				A8AD696B1B97589200876333 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8AD69741B97589300876333 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8AD697F1B97589300876333 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A8AD695E1B97589200876333 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8AD69681B97589200876333 /* ViewController.swift in Sources */,
+				A8AD69661B97589200876333 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8AD69721B97589300876333 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8AD697B1B97589300876333 /* Horoscope_HAMIITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8AD697D1B97589300876333 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8AD69861B97589300876333 /* Horoscope_HAMIIUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A8AD69781B97589300876333 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8AD69611B97589200876333 /* Horoscope_HAMII */;
+			targetProxy = A8AD69771B97589300876333 /* PBXContainerItemProxy */;
+		};
+		A8AD69831B97589300876333 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8AD69611B97589200876333 /* Horoscope_HAMII */;
+			targetProxy = A8AD69821B97589300876333 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A8AD69691B97589200876333 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8AD696A1B97589200876333 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A8AD696E1B97589200876333 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8AD696F1B97589200876333 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A8AD69881B97589300876333 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A8AD69891B97589300876333 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A8AD698B1B97589300876333 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Horoscope_HAMII/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "HAM.Horoscope-HAMII";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A8AD698C1B97589300876333 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Horoscope_HAMII/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "HAM.Horoscope-HAMII";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A8AD698E1B97589300876333 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Horoscope_HAMIITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "HAM.Horoscope-HAMIITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Horoscope_HAMII.app/Horoscope_HAMII";
+			};
+			name = Debug;
+		};
+		A8AD698F1B97589300876333 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Horoscope_HAMIITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "HAM.Horoscope-HAMIITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Horoscope_HAMII.app/Horoscope_HAMII";
+			};
+			name = Release;
+		};
+		A8AD69911B97589300876333 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Horoscope_HAMIIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "HAM.Horoscope-HAMIIUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Horoscope_HAMII;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		A8AD69921B97589300876333 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Horoscope_HAMIIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "HAM.Horoscope-HAMIIUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Horoscope_HAMII;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A8AD695D1B97589200876333 /* Build configuration list for PBXProject "Horoscope_HAMII" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8AD69881B97589300876333 /* Debug */,
+				A8AD69891B97589300876333 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8AD698A1B97589300876333 /* Build configuration list for PBXNativeTarget "Horoscope_HAMII" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8AD698B1B97589300876333 /* Debug */,
+				A8AD698C1B97589300876333 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A8AD698D1B97589300876333 /* Build configuration list for PBXNativeTarget "Horoscope_HAMIITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8AD698E1B97589300876333 /* Debug */,
+				A8AD698F1B97589300876333 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A8AD69901B97589300876333 /* Build configuration list for PBXNativeTarget "Horoscope_HAMIIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8AD69911B97589300876333 /* Debug */,
+				A8AD69921B97589300876333 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A8AD695A1B97589200876333 /* Project object */;
+}

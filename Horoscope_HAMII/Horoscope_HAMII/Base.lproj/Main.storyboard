@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Horoscope_HAMII" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rfi-ci-buA"/>
+                        <viewControllerLayoutGuide type="bottom" id="cM5-cX-P6B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Birthday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYF-4h-v3K">
+                                <rect key="frame" x="226" y="41" width="148" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="giW-6A-ZK5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWa-Px-6TA">
+                                <rect key="frame" x="20" y="356" width="560" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="JNr-bO-KnS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="l2C-VS-wMN">
+                                <rect key="frame" x="20" y="98" width="560" height="259"/>
+                                <animations/>
+                                <date key="date" timeIntervalSinceReferenceDate="462903670.84542203">
+                                    <!--2015-09-02 16:21:10 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6f-YE-r8e" userLabel="Horo Description">
+                                <rect key="frame" x="20" y="395" width="399" height="96"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SR9-ze-HAq">
+                                <rect key="frame" x="427" y="421" width="140" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="7SU-Ra-JXS"/>
+                                    <constraint firstAttribute="height" constant="30" id="qxc-1F-geY"/>
+                                </constraints>
+                                <state key="normal" title="See your Horoscope"/>
+                                <connections>
+                                    <action selector="doneDateSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FSC-h7-wtS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iWa-Px-6TA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1ps-yQ-3d2"/>
+                            <constraint firstItem="cM5-cX-P6B" firstAttribute="top" secondItem="t6f-YE-r8e" secondAttribute="bottom" constant="109" id="4Cr-qu-vd9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SR9-ze-HAq" secondAttribute="trailing" constant="13" id="8Hb-uc-L20"/>
+                            <constraint firstItem="SR9-ze-HAq" firstAttribute="leading" secondItem="t6f-YE-r8e" secondAttribute="trailing" constant="8" symbolic="YES" id="DSu-G1-fvl"/>
+                            <constraint firstItem="eYF-4h-v3K" firstAttribute="top" secondItem="Rfi-ci-buA" secondAttribute="bottom" constant="21" id="JfH-2K-qKf"/>
+                            <constraint firstItem="l2C-VS-wMN" firstAttribute="top" secondItem="eYF-4h-v3K" secondAttribute="bottom" constant="36" id="KnX-dR-ToT"/>
+                            <constraint firstItem="iWa-Px-6TA" firstAttribute="leading" secondItem="l2C-VS-wMN" secondAttribute="leading" id="VJM-dG-aui"/>
+                            <constraint firstItem="l2C-VS-wMN" firstAttribute="centerX" secondItem="eYF-4h-v3K" secondAttribute="centerX" id="Zjx-3m-aEe"/>
+                            <constraint firstItem="cM5-cX-P6B" firstAttribute="top" secondItem="SR9-ze-HAq" secondAttribute="bottom" constant="149" id="a5e-oD-XEz"/>
+                            <constraint firstItem="l2C-VS-wMN" firstAttribute="trailing" secondItem="iWa-Px-6TA" secondAttribute="trailing" id="eIu-3d-ofe"/>
+                            <constraint firstItem="t6f-YE-r8e" firstAttribute="top" secondItem="l2C-VS-wMN" secondAttribute="bottom" constant="38" id="gXH-Rq-yvk"/>
+                            <constraint firstItem="l2C-VS-wMN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iTW-R2-ZaW"/>
+                            <constraint firstItem="SR9-ze-HAq" firstAttribute="top" secondItem="iWa-Px-6TA" secondAttribute="bottom" constant="21" id="nQ2-UD-SNj"/>
+                            <constraint firstItem="t6f-YE-r8e" firstAttribute="leading" secondItem="iWa-Px-6TA" secondAttribute="leading" id="vx5-Sq-lgK"/>
+                            <constraint firstItem="iWa-Px-6TA" firstAttribute="top" secondItem="l2C-VS-wMN" secondAttribute="bottom" constant="-1" id="yvL-Ld-LyX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="horoDescribeLabel" destination="t6f-YE-r8e" id="Nlc-yW-Txm"/>
+                        <outlet property="horoResult" destination="iWa-Px-6TA" id="KkZ-uN-PKZ"/>
+                        <outlet property="myDatePicker" destination="l2C-VS-wMN" id="YFy-CO-s3T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="556" y="506"/>
+        </scene>
+    </scenes>
+</document>
