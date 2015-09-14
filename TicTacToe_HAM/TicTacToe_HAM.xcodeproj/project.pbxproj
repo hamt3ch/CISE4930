@@ -14,6 +14,8 @@
 		A8094D5F1B9FC0110016918E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8094D5D1B9FC0110016918E /* LaunchScreen.storyboard */; };
 		A8094D6A1B9FC0110016918E /* TicTacToe_HAMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8094D691B9FC0110016918E /* TicTacToe_HAMTests.swift */; };
 		A8094D751B9FC0110016918E /* TicTacToe_HAMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8094D741B9FC0110016918E /* TicTacToe_HAMUITests.swift */; };
+		A8094D831BA0C1200016918E /* UserInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8094D821BA0C1200016918E /* UserInput.swift */; settings = {ASSET_TAGS = (); }; };
+		A854E7481BA70A3D00E797A3 /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A854E7471BA70A3D00E797A3 /* GameBoard.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		A8094D701B9FC0110016918E /* TicTacToe_HAMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToe_HAMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8094D741B9FC0110016918E /* TicTacToe_HAMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToe_HAMUITests.swift; sourceTree = "<group>"; };
 		A8094D761B9FC0110016918E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8094D821BA0C1200016918E /* UserInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInput.swift; sourceTree = "<group>"; };
+		A854E7471BA70A3D00E797A3 /* GameBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				A8094D541B9FC0110016918E /* AppDelegate.swift */,
 				A8094D561B9FC0110016918E /* MainMenu.swift */,
+				A8094D821BA0C1200016918E /* UserInput.swift */,
+				A854E7471BA70A3D00E797A3 /* GameBoard.swift */,
 				A8094D581B9FC0110016918E /* Main.storyboard */,
 				A8094D5B1B9FC0110016918E /* Assets.xcassets */,
 				A8094D5D1B9FC0110016918E /* LaunchScreen.storyboard */,
@@ -258,7 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A854E7481BA70A3D00E797A3 /* GameBoard.swift in Sources */,
 				A8094D571B9FC0110016918E /* MainMenu.swift in Sources */,
+				A8094D831BA0C1200016918E /* UserInput.swift in Sources */,
 				A8094D551B9FC0110016918E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +492,7 @@
 				A8094D7B1B9FC0110016918E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A8094D7C1B9FC0110016918E /* Build configuration list for PBXNativeTarget "TicTacToe_HAMTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +501,7 @@
 				A8094D7E1B9FC0110016918E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A8094D7F1B9FC0110016918E /* Build configuration list for PBXNativeTarget "TicTacToe_HAMUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +510,7 @@
 				A8094D811B9FC0110016918E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
