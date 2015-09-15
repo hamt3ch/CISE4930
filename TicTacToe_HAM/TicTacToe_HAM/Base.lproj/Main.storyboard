@@ -41,11 +41,6 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="161" y="507" width="78" height="30"/>
                                 </variation>
-                                <connections>
-                                    <segue destination="HL7-L2-Mqg" kind="popoverPresentation" popoverAnchorView="l0O-nU-p9O" id="qgX-a2-msV">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -109,7 +104,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="submitUserOne:" destination="HL7-L2-Mqg" eventType="touchUpInside" id="5il-al-vuX"/>
-                                    <segue destination="6P8-RN-eZU" kind="popoverPresentation" popoverAnchorView="VkV-Tw-Nus" id="Pqh-Tp-SbK">
+                                    <segue destination="6P8-RN-eZU" kind="popoverPresentation" popoverAnchorView="VkV-Tw-Nus" id="4hY-JK-l7n">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -179,7 +174,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="submitUserTwo:" destination="6P8-RN-eZU" eventType="touchUpInside" id="Qae-SH-3tK"/>
-                                    <segue destination="9jU-9r-YCt" kind="popoverPresentation" popoverAnchorView="1km-0T-UGM" id="DiX-5q-ZT3">
+                                    <segue destination="9jU-9r-YCt" kind="popoverPresentation" popoverAnchorView="1km-0T-UGM" id="wyE-1o-OK5">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -341,13 +336,6 @@
                                     <rect key="frame" x="281" y="364" width="100" height="104"/>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ql8-tL-DhL" userLabel="Pos6">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <animations/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="9" y="511" width="114" height="104"/>
-                                </variation>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vOh-4O-rQp" userLabel="Pos4">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
@@ -383,6 +371,13 @@
                                     <rect key="frame" x="20" y="216" width="100" height="104"/>
                                 </variation>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ql8-tL-DhL" userLabel="Pos6">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="511" width="100" height="104"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -400,12 +395,12 @@
                                 <exclude reference="k9P-er-sIN"/>
                                 <exclude reference="Z5l-BM-qCn"/>
                                 <exclude reference="jiI-NT-mUw"/>
-                                <exclude reference="ql8-tL-DhL"/>
                                 <exclude reference="vOh-4O-rQp"/>
                                 <exclude reference="Gl2-a3-Fec"/>
                                 <exclude reference="dbm-E8-mNZ"/>
                                 <exclude reference="NrO-4A-Ipe"/>
                                 <exclude reference="UuM-bo-BBK"/>
+                                <exclude reference="ql8-tL-DhL"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -422,12 +417,12 @@
                                 <include reference="k9P-er-sIN"/>
                                 <include reference="Z5l-BM-qCn"/>
                                 <include reference="jiI-NT-mUw"/>
-                                <include reference="ql8-tL-DhL"/>
                                 <include reference="vOh-4O-rQp"/>
                                 <include reference="Gl2-a3-Fec"/>
                                 <include reference="dbm-E8-mNZ"/>
                                 <include reference="NrO-4A-Ipe"/>
                                 <include reference="UuM-bo-BBK"/>
+                                <include reference="ql8-tL-DhL"/>
                             </mask>
                         </variation>
                     </view>
@@ -453,7 +448,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="50V-4b-S7G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2244" y="1037.25"/>
+            <point key="canvasLocation" x="2244" y="963.75"/>
         </scene>
     </scenes>
 </document>
