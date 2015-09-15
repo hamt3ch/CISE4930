@@ -41,6 +41,11 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="161" y="507" width="78" height="30"/>
                                 </variation>
+                                <connections>
+                                    <segue destination="HL7-L2-Mqg" kind="popoverPresentation" popoverAnchorView="l0O-nU-p9O" id="eKd-R9-fRx">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
