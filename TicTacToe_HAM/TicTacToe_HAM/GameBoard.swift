@@ -32,7 +32,7 @@ class GameBoard: UIViewController {
     
     let cross : UIImage = UIImage(named:"tic-tac-toe-X")!
     let circle : UIImage = UIImage(named:"tic-tac-toe-O")!
-    
+
     var currentUser:String = "player1"
     var checkUsers: [String] = ["player1", "player2"]
     var myBoard : [[String]] = [["0","1","2"],["3","4","5"],["6","7","8"]]
@@ -133,36 +133,47 @@ class GameBoard: UIViewController {
                 print("Bottom Row is filled")
             }
             
-            
             //Vertically Col1
             if(myBoard[0][0] == users && myBoard[1][0] == users && myBoard[2][0] == users) {
                 print("Left Column is filled")
             }
             
             //Vertically Col2
-            if(myBoard[1][0] == users && myBoard[1][1] == users && myBoard[1][2] == users) {
-                print("Left Column is filled")
+            if(myBoard[0][1] == users && myBoard[1][1] == users && myBoard[2][1] == users) {
+                print("Middle Column is filled")
             }
             
             //Vertically Col3
-            if(myBoard[2][0] == users && myBoard[2][1] == users && myBoard[2][2] == users) {
-                print("Left Column is filled")
+            if(myBoard[0][2] == users && myBoard[1][2] == users && myBoard[2][2] == users) {
+                print("Right Column is filled")
             }
             
             //Diagonally Right >> Left
             if(myBoard[0][0] == users && myBoard[1][1] == users && myBoard[2][2] == users) {
-                print("Right Diagonal")
+                print("Left >> Right Diagonal")
             }
             
             //Diagonally Left >> Right
             if(myBoard[0][2] == users && myBoard[1][1] == users && myBoard[2][0] == users) {
-                print("Right Diagonal")
+                print("Right >> Left Diagonal")
             }
         }
+    }
+    @IBAction func clearBtnPressed(sender: AnyObject) {
+        clearBoard()
     }
     
     func clearBoard() {
        myBoard = [["0","1","2"],["3","4","5"],["6","7","8"]]
        Pos0.image = nil
+       Pos1.image = nil
+       Pos2.image = nil
+       Pos3.image = nil
+       Pos4.image = nil
+       Pos5.image = nil
+       Pos6.image = nil
+       Pos7.image = nil
+       Pos8.image = nil
+
     }
 }
