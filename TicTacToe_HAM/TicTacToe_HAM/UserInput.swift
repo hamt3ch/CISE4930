@@ -12,8 +12,8 @@ import UIKit
 
 
 struct MyUsers {
-    static var user1 = "someString"
-    static var user2 = "anotherString"
+    static var user1 = ""
+    static var user2 = ""
 }
 
 class UserInput: UIViewController {
@@ -42,14 +42,32 @@ class UserInput: UIViewController {
     
     func setUsers (input:String)
     {
-        if(input == "one") {
-            print(firstPlayerName.text)
+        if(input == "one" && firstPlayerName.text != "") {
             MyUsers.user1 = firstPlayerName.text!
+            //Goto SubmitUser2.View
+            self.performSegueWithIdentifier("submitUser2", sender: self)
         }
             
-        else {
-            print(secondPlayerName.text)
+        if(input == "two" && secondPlayerName.text != ""){
             MyUsers.user2 = secondPlayerName.text!
+            self.performSegueWithIdentifier("startGame", sender: self)
+        }
+        
+        else {
+            //prompt user to put UserName
+            let alertController = UIAlertController(title:"Empty Fields", message: "Please enter username", preferredStyle: .Alert)
+ 
+            let OKAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
+
+            }
+            
+            alertController.addAction(OKAction)
+            
+            self.presentViewController(alertController, animated: true) {
+                // ...
+            }
+
+        
         }
     
     }

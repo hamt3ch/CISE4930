@@ -162,6 +162,11 @@ class GameBoard: UIViewController{
                 showWinnerAlert(self.currentUser)
              
             }
+            
+            //Cats Game Case
+//            else if () {
+//                
+//            }
         }
     }
     
@@ -195,8 +200,7 @@ class GameBoard: UIViewController{
         }
         
         alertController.addAction(seeLeaderAction)
-        
-        
+            
         self.presentViewController(alertController, animated: true) {
             // ...
         }
