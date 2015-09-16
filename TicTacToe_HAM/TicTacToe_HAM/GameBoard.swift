@@ -7,11 +7,9 @@
 //
 
 import Foundation
-import Foundation
-
 import UIKit
 
-class GameBoard: UIViewController {
+class GameBoard: UIViewController{
     
     //Positions going down >> left to right
     
@@ -49,7 +47,7 @@ class GameBoard: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     @IBAction func userPlacedPiece(sender: AnyObject) {
         let cross : UIImage = UIImage(named:"tic-tac-toe-X")!
         let circle : UIImage = UIImage(named:"tic-tac-toe-O")!
@@ -121,49 +119,78 @@ class GameBoard: UIViewController {
             //Horizontally Row1
             if(myBoard[0][0] == users && myBoard[0][1] == users && myBoard[0][2] == users) {
                 print("Top Row is filled")
+                showWinnerAlert(self.currentUser)
             }
             
             //Horizontally Row2
-            if(myBoard[1][0] == users && myBoard[1][1] == users && myBoard[1][2] == users) {
+            else if(myBoard[1][0] == users && myBoard[1][1] == users && myBoard[1][2] == users) {
                 print("Middle Row is filled")
+                showWinnerAlert(self.currentUser)
             }
             
             //Horizontally Row3
-            if(myBoard[2][0] == users && myBoard[2][1] == users && myBoard[2][2] == users) {
+            else if(myBoard[2][0] == users && myBoard[2][1] == users && myBoard[2][2] == users) {
                 print("Bottom Row is filled")
+                showWinnerAlert(self.currentUser)
             }
             
             //Vertically Col1
-            if(myBoard[0][0] == users && myBoard[1][0] == users && myBoard[2][0] == users) {
+            else if(myBoard[0][0] == users && myBoard[1][0] == users && myBoard[2][0] == users) {
                 print("Left Column is filled")
+                showWinnerAlert(self.currentUser)
             }
             
             //Vertically Col2
-            if(myBoard[0][1] == users && myBoard[1][1] == users && myBoard[2][1] == users) {
+            else if(myBoard[0][1] == users && myBoard[1][1] == users && myBoard[2][1] == users) {
                 print("Middle Column is filled")
+                showWinnerAlert(self.currentUser)
             }
             
             //Vertically Col3
-            if(myBoard[0][2] == users && myBoard[1][2] == users && myBoard[2][2] == users) {
+            else if(myBoard[0][2] == users && myBoard[1][2] == users && myBoard[2][2] == users) {
                 print("Right Column is filled")
+                showWinnerAlert(self.currentUser)
             }
             
             //Diagonally Right >> Left
-            if(myBoard[0][0] == users && myBoard[1][1] == users && myBoard[2][2] == users) {
+            else if(myBoard[0][0] == users && myBoard[1][1] == users && myBoard[2][2] == users) {
                 print("Left >> Right Diagonal")
+                showWinnerAlert(self.currentUser)
             }
             
             //Diagonally Left >> Right
-            if(myBoard[0][2] == users && myBoard[1][1] == users && myBoard[2][0] == users) {
+            else if(myBoard[0][2] == users && myBoard[1][1] == users && myBoard[2][0] == users) {
                 print("Right >> Left Diagonal")
+                showWinnerAlert(self.currentUser)
+             
             }
         }
     }
-    @IBAction func clearBtnPressed(sender: AnyObject) {
-        clearBoard()
+    
+    func showWinnerAlert (winner:String) {
+        
+        let alertController = UIAlertController(title: "Default Style", message: "A standard alert.", preferredStyle: .Alert)
+        
+        let cancelAction = UIAlertAction(title: "Change Players", style: .Cancel) { (action) in
+            //Goto MainMenu
+            self.performSegueWithIdentifier("gotoSetNewUsers", sender: self)
+        }
+        
+        alertController.addAction(cancelAction)
+        
+        let OKAction = UIAlertAction(title: "Restart", style: .Default) { (action) in
+            //startNewGame
+            self.clearBoard()
+        }
+        
+        alertController.addAction(OKAction)
+        
+        self.presentViewController(alertController, animated: true) {
+            // ...
+        }
     }
     
-    func clearBoard() {
+    func clearBoard() { // reset the game board
        myBoard = [["0","1","2"],["3","4","5"],["6","7","8"]]
        Pos0.image = nil
        Pos1.image = nil

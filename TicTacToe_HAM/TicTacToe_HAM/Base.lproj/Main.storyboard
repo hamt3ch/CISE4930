@@ -42,9 +42,7 @@
                                     <rect key="frame" x="161" y="507" width="78" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="HL7-L2-Mqg" kind="popoverPresentation" popoverAnchorView="l0O-nU-p9O" id="eKd-R9-fRx">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="HL7-L2-Mqg" kind="show" id="GlT-k4-ylh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -79,6 +77,7 @@
                         <viewControllerLayoutGuide type="bottom" id="9cg-qn-Wkk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rqJ-gc-GCu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Peo-FV-TaP">
@@ -109,9 +108,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="submitUserOne:" destination="HL7-L2-Mqg" eventType="touchUpInside" id="5il-al-vuX"/>
-                                    <segue destination="6P8-RN-eZU" kind="popoverPresentation" popoverAnchorView="VkV-Tw-Nus" id="4hY-JK-l7n">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="6P8-RN-eZU" kind="show" id="9l7-FI-GvH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -149,6 +146,7 @@
                         <viewControllerLayoutGuide type="bottom" id="1c6-4V-E8Q"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kdu-YJ-Jxu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAf-F1-iF5">
@@ -179,9 +177,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="submitUserTwo:" destination="6P8-RN-eZU" eventType="touchUpInside" id="Qae-SH-3tK"/>
-                                    <segue destination="9jU-9r-YCt" kind="popoverPresentation" popoverAnchorView="1km-0T-UGM" id="wyE-1o-OK5">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="9jU-9r-YCt" kind="show" id="bPs-Fv-NLs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -219,107 +215,9 @@
                         <viewControllerLayoutGuide type="bottom" id="bLh-bH-Bor"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zGF-sh-OUi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEC-XN-8do">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="0"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="217" width="100" height="103"/>
-                                </variation>
-                                <connections>
-                                    <action selector="userPlacedPiece:" destination="9jU-9r-YCt" eventType="touchUpInside" id="uFj-BN-Iot"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDn-Ru-NsI">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="1"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="146" y="217" width="100" height="104"/>
-                                </variation>
-                                <connections>
-                                    <action selector="userPlacedPiece:" destination="9jU-9r-YCt" eventType="touchUpInside" id="h72-62-aeS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zvu-s2-Fih">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="2"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="276" y="217" width="100" height="101"/>
-                                </variation>
-                                <connections>
-                                    <action selector="userPlacedPiece:" destination="9jU-9r-YCt" eventType="touchUpInside" id="jhm-hX-PaZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ohi-43-i5G">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="3"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="364" width="96" height="103"/>
-                                </variation>
-                                <connections>
-                                    <action selector="userPlacedPiece:" destination="9jU-9r-YCt" eventType="touchUpInside" id="mSZ-Nj-svC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swL-Qi-6gt">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="4"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="146" y="364" width="100" height="103"/>
-                                </variation>
-                                <connections>
-                                    <action selector="userPlacedPiece:" destination="9jU-9r-YCt" eventType="touchUpInside" id="ixm-fn-egI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4If-Rz-MwL">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="5"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="276" y="364" width="100" height="102"/>
-                                </variation>
-                                <connections>
-                                    <action selector="userPlacedPiece:" destination="9jU-9r-YCt" eventType="touchUpInside" id="nMS-uh-VEI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjD-bY-lpo">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="6"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="5" y="511" width="114" height="106"/>
-                                </variation>
-                                <connections>
-                                    <action selector="userPlacedPiece:" destination="9jU-9r-YCt" eventType="touchUpInside" id="vvf-KR-glx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rvs-yg-iDq">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="7"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="146" y="512" width="100" height="103"/>
-                                </variation>
-                                <connections>
-                                    <action selector="userPlacedPiece:" destination="9jU-9r-YCt" eventType="touchUpInside" id="sYV-v2-xzA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIx-Dd-8V1">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="8"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="281" y="511" width="95" height="104"/>
-                                </variation>
-                                <connections>
-                                    <action selector="userPlacedPiece:" destination="9jU-9r-YCt" eventType="touchUpInside" id="Hea-ec-Edz"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k9P-er-sIN" userLabel="Pos8">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
@@ -380,18 +278,97 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="216" width="100" height="104"/>
+                                    <rect key="frame" x="14" y="217" width="100" height="104"/>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6of-WJ-4vJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEC-XN-8do">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
-                                <state key="normal" title="ClearBoard"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="162" y="136" width="77" height="30"/>
+                                    <rect key="frame" x="16" y="217" width="100" height="103"/>
                                 </variation>
                                 <connections>
-                                    <action selector="clearBtnPressed:" destination="9jU-9r-YCt" eventType="touchUpInside" id="WcR-i4-276"/>
+                                    <action selector="userPlacedPiece:" destination="9jU-9r-YCt" eventType="touchUpInside" id="uFj-BN-Iot"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDn-Ru-NsI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="146" y="217" width="100" height="104"/>
+                                </variation>
+                                <connections>
+                                    <action selector="userPlacedPiece:" destination="9jU-9r-YCt" eventType="touchUpInside" id="h72-62-aeS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zvu-s2-Fih">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="276" y="217" width="100" height="101"/>
+                                </variation>
+                                <connections>
+                                    <action selector="userPlacedPiece:" destination="9jU-9r-YCt" eventType="touchUpInside" id="jhm-hX-PaZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ohi-43-i5G">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="364" width="96" height="103"/>
+                                </variation>
+                                <connections>
+                                    <action selector="userPlacedPiece:" destination="9jU-9r-YCt" eventType="touchUpInside" id="mSZ-Nj-svC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swL-Qi-6gt">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="146" y="364" width="100" height="103"/>
+                                </variation>
+                                <connections>
+                                    <action selector="userPlacedPiece:" destination="9jU-9r-YCt" eventType="touchUpInside" id="ixm-fn-egI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4If-Rz-MwL">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="276" y="364" width="100" height="102"/>
+                                </variation>
+                                <connections>
+                                    <action selector="userPlacedPiece:" destination="9jU-9r-YCt" eventType="touchUpInside" id="nMS-uh-VEI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjD-bY-lpo">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="5" y="511" width="114" height="106"/>
+                                </variation>
+                                <connections>
+                                    <action selector="userPlacedPiece:" destination="9jU-9r-YCt" eventType="touchUpInside" id="vvf-KR-glx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rvs-yg-iDq">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="146" y="512" width="100" height="103"/>
+                                </variation>
+                                <connections>
+                                    <action selector="userPlacedPiece:" destination="9jU-9r-YCt" eventType="touchUpInside" id="sYV-v2-xzA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIx-Dd-8V1">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="281" y="511" width="95" height="104"/>
+                                </variation>
+                                <connections>
+                                    <action selector="userPlacedPiece:" destination="9jU-9r-YCt" eventType="touchUpInside" id="Hea-ec-Edz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -399,15 +376,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="MEC-XN-8do"/>
-                                <exclude reference="GDn-Ru-NsI"/>
-                                <exclude reference="Zvu-s2-Fih"/>
-                                <exclude reference="Ohi-43-i5G"/>
-                                <exclude reference="swL-Qi-6gt"/>
-                                <exclude reference="4If-Rz-MwL"/>
-                                <exclude reference="sjD-bY-lpo"/>
-                                <exclude reference="Rvs-yg-iDq"/>
-                                <exclude reference="FIx-Dd-8V1"/>
                                 <exclude reference="k9P-er-sIN"/>
                                 <exclude reference="Z5l-BM-qCn"/>
                                 <exclude reference="jiI-NT-mUw"/>
@@ -417,20 +385,19 @@
                                 <exclude reference="dbm-E8-mNZ"/>
                                 <exclude reference="NrO-4A-Ipe"/>
                                 <exclude reference="UuM-bo-BBK"/>
-                                <exclude reference="6of-WJ-4vJ"/>
+                                <exclude reference="MEC-XN-8do"/>
+                                <exclude reference="GDn-Ru-NsI"/>
+                                <exclude reference="Zvu-s2-Fih"/>
+                                <exclude reference="Ohi-43-i5G"/>
+                                <exclude reference="swL-Qi-6gt"/>
+                                <exclude reference="4If-Rz-MwL"/>
+                                <exclude reference="sjD-bY-lpo"/>
+                                <exclude reference="Rvs-yg-iDq"/>
+                                <exclude reference="FIx-Dd-8V1"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="MEC-XN-8do"/>
-                                <include reference="GDn-Ru-NsI"/>
-                                <include reference="Zvu-s2-Fih"/>
-                                <include reference="Ohi-43-i5G"/>
-                                <include reference="swL-Qi-6gt"/>
-                                <include reference="4If-Rz-MwL"/>
-                                <include reference="sjD-bY-lpo"/>
-                                <include reference="Rvs-yg-iDq"/>
-                                <include reference="FIx-Dd-8V1"/>
                                 <include reference="k9P-er-sIN"/>
                                 <include reference="Z5l-BM-qCn"/>
                                 <include reference="jiI-NT-mUw"/>
@@ -440,7 +407,15 @@
                                 <include reference="dbm-E8-mNZ"/>
                                 <include reference="NrO-4A-Ipe"/>
                                 <include reference="UuM-bo-BBK"/>
-                                <include reference="6of-WJ-4vJ"/>
+                                <include reference="MEC-XN-8do"/>
+                                <include reference="GDn-Ru-NsI"/>
+                                <include reference="Zvu-s2-Fih"/>
+                                <include reference="Ohi-43-i5G"/>
+                                <include reference="swL-Qi-6gt"/>
+                                <include reference="4If-Rz-MwL"/>
+                                <include reference="sjD-bY-lpo"/>
+                                <include reference="Rvs-yg-iDq"/>
+                                <include reference="FIx-Dd-8V1"/>
                             </mask>
                         </variation>
                     </view>
@@ -462,11 +437,15 @@
                         <outlet property="pos6" destination="ql8-tL-DhL" id="ZHK-Fl-1UE"/>
                         <outlet property="pos7" destination="Z5l-BM-qCn" id="vkW-zf-6pC"/>
                         <outlet property="pos8" destination="k9P-er-sIN" id="QUc-aP-dpd"/>
+                        <segue destination="HL7-L2-Mqg" kind="show" identifier="gotoSetNewUsers" id="Igh-Un-yfa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="50V-4b-S7G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2244" y="963.75"/>
+            <point key="canvasLocation" x="2157" y="1053.75"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Igh-Un-yfa"/>
+    </inferredMetricsTieBreakers>
 </document>
