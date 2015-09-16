@@ -33,7 +33,7 @@ class GameBoard: UIViewController{
 
     var currentUser:String = "player1"
     var checkUsers: [String] = ["player1", "player2"]
-    var myBoard : [[String]] = [["0","1","2"],["3","4","5"],["6","7","8"]]
+    var myBoard : [[String]] = [["0","0","0"],["0","0","0"],["0","0","0"]]
 
     
     override func viewDidLoad() {
@@ -164,9 +164,21 @@ class GameBoard: UIViewController{
             }
             
             //Cats Game Case
-//            else if () {
-//                
-//            }
+            else if (checkForCats()) {
+                let alertController = UIAlertController(title: "Cats Game!", message: "Tie game restart match", preferredStyle: .Alert)
+                
+                let restartAction = UIAlertAction(title: "Restart", style: .Default) { (action) in
+                    self.clearBoard()
+                }
+                
+                alertController.addAction(restartAction)
+                
+                self.presentViewController(alertController, animated: true) {
+                    // ...
+                }
+
+
+            }
         }
     }
     
@@ -177,7 +189,6 @@ class GameBoard: UIViewController{
         //addToLeaderBoard(winner)
         
         // create Alert
-        
         let alertController = UIAlertController(title: nameOfWinner + " has won!", message: "", preferredStyle: .Alert)
         
         let cancelAction = UIAlertAction(title: "Change Players", style: .Cancel) { (action) in
@@ -200,14 +211,14 @@ class GameBoard: UIViewController{
         }
         
         alertController.addAction(seeLeaderAction)
-            
+        
         self.presentViewController(alertController, animated: true) {
             // ...
         }
     }
     
     func clearBoard() { // reset the game board
-       myBoard = [["0","1","2"],["3","4","5"],["6","7","8"]]
+       myBoard = [["0","0","0"],["0","0","0"],["0","0","0"]]
        Pos0.image = nil
        Pos1.image = nil
        Pos2.image = nil
@@ -218,5 +229,17 @@ class GameBoard: UIViewController{
        Pos7.image = nil
        Pos8.image = nil
 
+    }
+    
+    func checkForCats () -> Bool {
+        for i in 0 ... 2 {
+            for j in 0 ... 2 {
+                if(myBoard[i][j] == "0"){ // if it catches a 0 >> Moves are still available
+                    return false
+                }
+            }
+        }
+        
+        return true // no more moves available
     }
 }
