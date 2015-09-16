@@ -39,8 +39,6 @@ class GameBoard: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        var circle : UIImage = UIImage(named:"tic-tac-toe-O")!
-        //pos0.image = circle
     }
     
     override func didReceiveMemoryWarning() {
@@ -169,7 +167,13 @@ class GameBoard: UIViewController{
     
     func showWinnerAlert (winner:String) {
         
-        let alertController = UIAlertController(title: "Default Style", message: "A standard alert.", preferredStyle: .Alert)
+        let nameOfWinner = (winner == "player1") ? MyUsers.user1 : MyUsers.user2
+        //Log usersWinStreak
+        //addToLeaderBoard(winner)
+        
+        // create Alert
+        
+        let alertController = UIAlertController(title: nameOfWinner + " has won!", message: "", preferredStyle: .Alert)
         
         let cancelAction = UIAlertAction(title: "Change Players", style: .Cancel) { (action) in
             //Goto MainMenu
@@ -184,6 +188,14 @@ class GameBoard: UIViewController{
         }
         
         alertController.addAction(OKAction)
+        
+        let seeLeaderAction = UIAlertAction(title: "LeaderBoard", style: .Default) { (action) in
+            //startNewGame
+            //self.clearBoard()
+        }
+        
+        alertController.addAction(seeLeaderAction)
+        
         
         self.presentViewController(alertController, animated: true) {
             // ...

@@ -10,11 +10,15 @@ import Foundation
 
 import UIKit
 
+
+struct MyUsers {
+    static var user1 = "someString"
+    static var user2 = "anotherString"
+}
+
 class UserInput: UIViewController {
     
-    
     @IBOutlet var firstPlayerName: UITextField!
-    
     @IBOutlet var secondPlayerName: UITextField!
     
     override func viewDidLoad() {
@@ -40,13 +44,13 @@ class UserInput: UIViewController {
     {
         if(input == "one") {
             print(firstPlayerName.text)
+            MyUsers.user1 = firstPlayerName.text!
         }
             
         else {
             print(secondPlayerName.text)
+            MyUsers.user2 = secondPlayerName.text!
         }
     
     }
-    
-    
 }
