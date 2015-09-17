@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+var content = [Int]()
+var count = 0
+var arr = [1,2,3,4,5]
+
 class GameBoard: UIViewController{
     
     //Positions going down >> left to right
@@ -34,7 +38,6 @@ class GameBoard: UIViewController{
     var currentUser:String = "player1"
     var checkUsers: [String] = ["player1", "player2"]
     var myBoard : [[String]] = [["0","0","0"],["0","0","0"],["0","0","0"]]
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,54 +63,74 @@ class GameBoard: UIViewController{
 
         switch(sender.tag){ // parse which button has been touched
         case 0:
-            print("Button 0 Pressed")
-            Pos0.image = playerPiece
-            myBoard[0][0] = self.currentUser
+            if(myBoard[0][0] == "0") { // is spot is empty
+                Pos0.image = playerPiece
+                myBoard[0][0] = self.currentUser
+                tglUser()
+            }
         case 1:
-            print("Button 1 Pressed")
-            Pos1.image = playerPiece
-            myBoard[0][1] = self.currentUser
+           if(myBoard[0][1] == "0") {
+                Pos1.image = playerPiece
+                myBoard[0][1] = self.currentUser
+                tglUser()
+            }
         case 2:
-            print("Button 2 Pressed")
-            Pos2.image = playerPiece
-            myBoard[0][2] = self.currentUser
+            if(myBoard[0][2] == "0") {
+                Pos2.image = playerPiece
+                myBoard[0][2] = self.currentUser
+                tglUser()
+            }
         case 3:
-            print("Button 3 Pressed")
-            Pos3.image = playerPiece
-            myBoard[1][0] = self.currentUser
+            if(myBoard[1][0] == "0") {
+                Pos3.image = playerPiece
+                myBoard[1][0] = self.currentUser
+                tglUser()
+            }
         case 4:
-            print("Button 4 Pressed")
-            Pos4.image = playerPiece
-            myBoard[1][1] = self.currentUser
+            if(myBoard[1][1] == "0") {
+                Pos4.image = playerPiece
+                myBoard[1][1] = self.currentUser
+                tglUser()
+            }
         case 5:
-            print("Button 5 Pressed")
-            Pos5.image = playerPiece
-            myBoard[1][2] = self.currentUser
+            if(myBoard[1][2] == "0") {
+                Pos5.image = playerPiece
+                myBoard[1][2] = self.currentUser
+                tglUser()
+            }
         case 6:
-            print("Button 6 Pressed")
-            Pos6.image = playerPiece
-            myBoard[2][0] = self.currentUser
+            if(myBoard[2][0] == "0") {
+                Pos6.image = playerPiece
+                myBoard[2][0] = self.currentUser
+                tglUser()
+            }
         case 7:
-            print("Button 7 Pressed")
-            Pos7.image = playerPiece
-            myBoard[2][1] = self.currentUser
+            if(myBoard[2][1] == "0") {
+                Pos7.image = playerPiece
+                myBoard[2][1] = self.currentUser
+                tglUser()
+            }
         case 8:
-            print("Button 8 Pressed")
-            Pos8.image = playerPiece
-            myBoard[2][2] = self.currentUser
+            if(myBoard[2][2] == "0") {
+                Pos8.image = playerPiece
+                myBoard[2][2] = self.currentUser
+                tglUser()
+            }
         default:
             print("Error in userPlacedPiece")
         }
         
+        checkForWinner() // check if game is complete
+        
+    }
+    
+    func tglUser () {
         if (self.currentUser == "player1"){
             self.currentUser = "player2"    //tgl user user
         }
         else {
             self.currentUser = "player1"    //tgl user
         }
-        
-        checkForWinner() // check if game is complete
-        
     }
     
     func checkForWinner () {
@@ -186,7 +209,7 @@ class GameBoard: UIViewController{
         
         let nameOfWinner = (winner == "player1") ? MyUsers.user1 : MyUsers.user2
         //Log usersWinStreak
-        //addToLeaderBoard(winner)
+        addToLeaderBoard(winner)
         
         // create Alert
         let alertController = UIAlertController(title: nameOfWinner + " has won!", message: "", preferredStyle: .Alert)
@@ -206,8 +229,8 @@ class GameBoard: UIViewController{
         alertController.addAction(OKAction)
         
         let seeLeaderAction = UIAlertAction(title: "LeaderBoard", style: .Default) { (action) in
-            //startNewGame
-            //self.clearBoard()
+            //Goto leaderBoard
+            self.performSegueWithIdentifier("showLeaderBoard", sender: self)
         }
         
         alertController.addAction(seeLeaderAction)
@@ -217,18 +240,38 @@ class GameBoard: UIViewController{
         }
     }
     
+    func addToLeaderBoard (thisWinner:String) {
+        
+        if NSUserDefaults.standardUserDefaults().objectForKey("tableContent") != nil
+        {
+            
+            let tempContent = NSUserDefaults.standardUserDefaults().objectForKey("tableContent")! as! [Int]
+            
+            for i in tempContent
+            {
+                content.append(tempContent[i])
+                
+            }
+            count = content.count
+            
+        }
+        else
+        {
+            NSUserDefaults.standardUserDefaults().setInteger(count, forKey: "countVariable")
+            NSUserDefaults.standardUserDefaults().setObject(content, forKey: "tableContent")
+        }
+        //count++
+        content.append(22)
+        
+
+    }
+    
     func clearBoard() { // reset the game board
        myBoard = [["0","0","0"],["0","0","0"],["0","0","0"]]
-       Pos0.image = nil
-       Pos1.image = nil
-       Pos2.image = nil
-       Pos3.image = nil
-       Pos4.image = nil
-       Pos5.image = nil
-       Pos6.image = nil
-       Pos7.image = nil
-       Pos8.image = nil
-
+       var positions = [Pos0,Pos1,Pos2,Pos3,Pos4,Pos5,Pos6,Pos7,Pos8]
+        for i in 0 ... 7 {
+            positions[i].image = nil
+        }
     }
     
     func checkForCats () -> Bool {
