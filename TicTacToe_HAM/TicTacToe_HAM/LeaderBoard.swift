@@ -22,15 +22,28 @@ class LeaderBoard: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return content.count
+        return players.count
     }
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
-        cell.textLabel!.text = String(content[indexPath.row])
-        return cell
+        
+        print(players)
+        print(players[indexPath.row])
+        print(leaderboard)
+        
+        if(leaderboard[players[indexPath.row]] != nil) {
+            cell.textLabel!.text = String(players[indexPath.row])
+            return cell
+        }
+        
+        else
+        {
+            return cell
+        }
+
     }
-    
-    
+
+
 }

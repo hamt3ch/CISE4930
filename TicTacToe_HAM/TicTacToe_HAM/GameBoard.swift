@@ -9,9 +9,12 @@
 import Foundation
 import UIKit
 
-var content = [Int]()
+//var leaderBoard : [String:Int] = []
+
 var count = 0
-var arr = [1,2,3,4,5]
+var content = ["Third":1 , "First" : 5 ,"Second" : 4 ]
+var players = [String]()
+var leaderboard = [String:Int]()
 
 class GameBoard: UIViewController{
     
@@ -42,6 +45,7 @@ class GameBoard: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        sortDictionaryByKey(content)
     }
     
     override func didReceiveMemoryWarning() {
@@ -209,7 +213,7 @@ class GameBoard: UIViewController{
         
         let nameOfWinner = (winner == "player1") ? MyUsers.user1 : MyUsers.user2
         //Log usersWinStreak
-        addToLeaderBoard(winner)
+        addToLeaderBoard(nameOfWinner)
         
         // create Alert
         let alertController = UIAlertController(title: nameOfWinner + " has won!", message: "", preferredStyle: .Alert)
@@ -241,35 +245,22 @@ class GameBoard: UIViewController{
     }
     
     func addToLeaderBoard (thisWinner:String) {
-        
-        if NSUserDefaults.standardUserDefaults().objectForKey("tableContent") != nil
-        {
-            
-            let tempContent = NSUserDefaults.standardUserDefaults().objectForKey("tableContent")! as! [Int]
-            
-            for i in tempContent
-            {
-                content.append(tempContent[i])
-                
-            }
-            count = content.count
-            
+        if(leaderboard[thisWinner] == nil) { // newWinner
+            leaderboard[thisWinner] = 1
         }
+
         else
         {
-            NSUserDefaults.standardUserDefaults().setInteger(count, forKey: "countVariable")
-            NSUserDefaults.standardUserDefaults().setObject(content, forKey: "tableContent")
+            leaderboard[thisWinner]! += 1
         }
-        //count++
-        content.append(22)
-        
-
+        print(leaderboard)
+    
     }
     
     func clearBoard() { // reset the game board
        myBoard = [["0","0","0"],["0","0","0"],["0","0","0"]]
        var positions = [Pos0,Pos1,Pos2,Pos3,Pos4,Pos5,Pos6,Pos7,Pos8]
-        for i in 0 ... 7 {
+        for i in 0 ... 8 {
             positions[i].image = nil
         }
     }
@@ -285,4 +276,12 @@ class GameBoard: UIViewController{
         
         return true // no more moves available
     }
+    
+    func sortDictionaryByKey (d : [String: Int])     {
+        for (k,v) in (Array(d).sort {$0.1 < $1.1}) {
+            print("\(k):\(v)")
+        }
+        
+    }
+    
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="frG-Mb-fmP">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -34,7 +34,8 @@
                                         <exclude reference="D5J-L1-jDf"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="156" y="95" width="88" height="21"/>
                                     <mask key="constraints">
                                         <include reference="3LL-GP-FGE"/>
                                         <include reference="D5J-L1-jDf"/>
@@ -45,6 +46,9 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Instructions"/>
+                                <connections>
+                                    <segue destination="00V-7h-TXK" kind="push" id="aIX-tl-Dlg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0O-nU-p9O">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -96,10 +100,52 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="Gau-19-RIL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="246" y="239.25"/>
+            <point key="canvasLocation" x="1164" y="239.25"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4ch-cv-SOw">
+            <objects>
+                <viewController id="00V-7h-TXK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FtZ-W3-F19"/>
+                        <viewControllerLayoutGuide type="bottom" id="GRD-yf-N3X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="odu-1k-8zX">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instuctions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUp-LT-R9l">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="158" y="380" width="84" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="WUp-LT-R9l"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="WUp-LT-R9l"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="vHB-S9-Ui3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HB0-7d-HA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676.5" y="958.5"/>
         </scene>
         <!--User Input-->
         <scene sceneID="F9M-Zv-CgM">
@@ -127,7 +173,8 @@
                                         <exclude reference="AJe-K5-QyA"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="157.5" y="140" width="85" height="21"/>
                                     <mask key="constraints">
                                         <include reference="AJe-K5-QyA"/>
                                     </mask>
@@ -137,6 +184,9 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Submit First Player Name"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="113.5" y="285" width="173" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="submitUserOne:" destination="HL7-L2-Mqg" eventType="touchUpInside" id="5il-al-vuX"/>
                                 </connections>
@@ -146,6 +196,9 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="192" width="360" height="30"/>
+                                </variation>
                             </textField>
                         </subviews>
                         <animations/>
@@ -199,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RAf-kA-Ggv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1432.5" y="239.25"/>
+            <point key="canvasLocation" x="2350.5" y="239.25"/>
         </scene>
         <!--User Input-->
         <scene sceneID="1is-L0-3U0">
@@ -229,7 +282,8 @@
                                         <exclude reference="qFd-6K-1aH"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="145" y="133" width="110" height="21"/>
                                     <mask key="constraints">
                                         <include reference="JR6-5Y-cYl"/>
                                         <include reference="qFd-6K-1aH"/>
@@ -241,11 +295,17 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="32" y="191" width="348" height="30"/>
+                                </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1km-0T-UGM">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Submit Second Player Name"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="102.5" y="286" width="195" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="submitUserTwo:" destination="6P8-RN-eZU" eventType="touchUpInside" id="Qae-SH-3tK"/>
                                 </connections>
@@ -302,7 +362,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RDc-pW-G9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2244" y="239.25"/>
+            <point key="canvasLocation" x="3162" y="239.25"/>
         </scene>
         <!--Leader Board-->
         <scene sceneID="8rP-eH-hD9">
@@ -313,6 +373,7 @@
                         <viewControllerLayoutGuide type="bottom" id="24j-mH-uwh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="z3n-ZX-jX6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z8L-C4-xZE">
@@ -323,6 +384,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="4W4-0e-b3F">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4W4-0e-b3F" id="3Hi-jt-w3C">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                         </tableViewCellContentView>
@@ -330,7 +392,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="80" y="137" width="240" height="526"/>
+                                    <rect key="frame" x="89" y="93" width="240" height="526"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="VyC-8E-3rM" id="ie4-rw-CET"/>
@@ -344,9 +406,20 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="151" y="86" width="98" height="21"/>
+                                    <rect key="frame" x="151" y="37" width="98" height="21"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piu-vm-OjI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="New Game"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="163" y="704" width="75" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="HL7-L2-Mqg" kind="show" id="Zj7-tv-Bw5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -354,19 +427,21 @@
                             <mask key="subviews">
                                 <exclude reference="z8L-C4-xZE"/>
                                 <exclude reference="APL-ba-Tw8"/>
+                                <exclude reference="piu-vm-OjI"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="z8L-C4-xZE"/>
                                 <include reference="APL-ba-Tw8"/>
+                                <include reference="piu-vm-OjI"/>
                             </mask>
                         </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pLF-NQ-FDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2151" y="1757.25"/>
+            <point key="canvasLocation" x="1411.5" y="1159.5"/>
         </scene>
         <!--Game Board-->
         <scene sceneID="0Hm-s9-Edu">
@@ -645,10 +720,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="50V-4b-S7G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2151" y="1034.25"/>
+            <point key="canvasLocation" x="2283" y="977.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6Ps-0E-C1f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="frG-Mb-fmP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fqf-Nd-PHW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="X0h-0x-EWi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Wa-B5-W9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="246" y="239.25"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Igh-Un-yfa"/>
+        <segue reference="GlT-k4-ylh"/>
     </inferredMetricsTieBreakers>
 </document>

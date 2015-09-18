@@ -44,12 +44,15 @@ class UserInput: UIViewController {
     {
         if(input == "one" && firstPlayerName.text != "") {
             MyUsers.user1 = firstPlayerName.text!
+            players.append(firstPlayerName.text!)
+            
             //Goto SubmitUser2.View
             self.performSegueWithIdentifier("submitUser2", sender: self)
         }
             
         if(input == "two" && secondPlayerName.text != ""){
             MyUsers.user2 = secondPlayerName.text!
+            players.append(secondPlayerName.text!)
             self.performSegueWithIdentifier("startGame", sender: self)
         }
         
