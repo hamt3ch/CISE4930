@@ -105,7 +105,7 @@
             </objects>
             <point key="canvasLocation" x="1164" y="239.25"/>
         </scene>
-        <!--View Controller-->
+        <!--Instructions-->
         <scene sceneID="4ch-cv-SOw">
             <objects>
                 <viewController id="00V-7h-TXK" sceneMemberID="viewController">
@@ -117,33 +117,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instuctions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUp-LT-R9l">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tK-t1-dCC">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="158" y="380" width="84" height="21"/>
+                                    <rect key="frame" x="132" y="149" width="126" height="121"/>
                                 </variation>
                             </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="WUp-LT-R9l"/>
+                                <exclude reference="2tK-t1-dCC"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="WUp-LT-R9l"/>
+                                <include reference="2tK-t1-dCC"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Dhf-nM-bX3" appends="YES" id="Q9E-hr-btb"/>
+                        </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="vHB-S9-Ui3"/>
+                    <navigationItem key="navigationItem" title="Instructions" id="vHB-S9-Ui3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HB0-7d-HA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Dhf-nM-bX3"/>
             </objects>
             <point key="canvasLocation" x="676.5" y="958.5"/>
         </scene>

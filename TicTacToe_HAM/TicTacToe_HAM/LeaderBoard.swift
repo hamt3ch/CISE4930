@@ -28,20 +28,9 @@ class LeaderBoard: UIViewController, UITableViewDelegate, UITableViewDataSource 
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
-        
-        print(players)
-        print(players[indexPath.row])
-        print(leaderboard)
-        
-        if(leaderboard[players[indexPath.row]] != nil) {
-            cell.textLabel!.text = String(players[indexPath.row])
+
+            cell.textLabel!.text = String(leaderboard[indexPath.row])
             return cell
-        }
-        
-        else
-        {
-            return cell
-        }
 
     }
 
