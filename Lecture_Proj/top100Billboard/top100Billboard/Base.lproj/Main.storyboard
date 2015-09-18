@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="top100Billboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84l-dC-rNf">
+                                <rect key="frame" x="0.0" y="5" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Top 10 View" id="YkX-Mc-nvZ">
+                                        <barButtonItem key="leftBarButtonItem" title="Top Ten List" id="wpC-08-VGO">
+                                            <connections>
+                                                <segue destination="gdx-as-gEP" kind="show" identifier="webToTable" id="4sC-31-upj"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uaT-GY-K0R">
+                                <rect key="frame" x="27" y="56" width="553" height="507"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uaT-GY-K0R" secondAttribute="bottom" constant="37" id="8fz-FT-LHa"/>
+                            <constraint firstItem="84l-dC-rNf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="5" id="KQc-Cw-Vnh"/>
+                            <constraint firstItem="84l-dC-rNf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Pfg-Cz-sUT"/>
+                            <constraint firstItem="uaT-GY-K0R" firstAttribute="top" secondItem="84l-dC-rNf" secondAttribute="bottom" constant="7" id="atZ-xY-eyW"/>
+                            <constraint firstItem="uaT-GY-K0R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="7" id="bNJ-BS-GFJ"/>
+                            <constraint firstItem="uaT-GY-K0R" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hpS-D0-oyz"/>
+                            <constraint firstAttribute="trailing" secondItem="84l-dC-rNf" secondAttribute="trailing" id="ub5-zk-nmZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Web" destination="uaT-GY-K0R" id="7D8-8W-zHg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301" y="394"/>
+        </scene>
+        <!--Song View Controller-->
+        <scene sceneID="HVi-gZ-5Dy">
+            <objects>
+                <viewController id="gdx-as-gEP" customClass="SongViewController" customModule="top100Billboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PQy-E3-Iba"/>
+                        <viewControllerLayoutGuide type="bottom" id="jGG-s3-enK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lc5-Lh-DEU" customClass="SongViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VFz-yk-Cfl">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <animations/>
+                                <items>
+                                    <navigationItem title="Title" id="gKR-Pv-laF">
+                                        <barButtonItem key="leftBarButtonItem" title="Done" id="5mR-fK-14w">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="7md-XC-gSW"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yyp-kX-QQf">
+                                <rect key="frame" x="141" y="75" width="318" height="510"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2tD-Us-uBp">
+                                        <rect key="frame" x="0.0" y="28" width="318" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2tD-Us-uBp" id="k3E-TS-lb6">
+                                            <rect key="frame" x="0.0" y="0.0" width="318" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gdx-as-gEP" id="Bfh-Ew-XWc"/>
+                                    <outlet property="delegate" destination="gdx-as-gEP" id="CUn-c6-Yvn"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xrg-aq-1tP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1046" y="394"/>
+        </scene>
+    </scenes>
+</document>
