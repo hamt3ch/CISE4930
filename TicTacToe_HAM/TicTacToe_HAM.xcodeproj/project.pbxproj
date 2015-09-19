@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A80539431BACB48500FC8626 /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80539421BACB48500FC8626 /* Instructions.swift */; settings = {ASSET_TAGS = (); }; };
 		A8094D551B9FC0110016918E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8094D541B9FC0110016918E /* AppDelegate.swift */; };
 		A8094D571B9FC0110016918E /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8094D561B9FC0110016918E /* MainMenu.swift */; };
 		A8094D5A1B9FC0110016918E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8094D581B9FC0110016918E /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A80539421BACB48500FC8626 /* Instructions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instructions.swift; sourceTree = "<group>"; };
 		A8094D511B9FC0110016918E /* TicTacToe_HAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe_HAM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8094D541B9FC0110016918E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8094D561B9FC0110016918E /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				A854E7471BA70A3D00E797A3 /* GameBoard.swift */,
 				A887D63F1BAA62B200EFBFC5 /* LeaderBoard.swift */,
 				A8094D581B9FC0110016918E /* Main.storyboard */,
+				A80539421BACB48500FC8626 /* Instructions.swift */,
 				A8094D5B1B9FC0110016918E /* Assets.xcassets */,
 				A8094D5D1B9FC0110016918E /* LaunchScreen.storyboard */,
 				A8094D601B9FC0110016918E /* Info.plist */,
@@ -271,6 +274,7 @@
 				A854E7481BA70A3D00E797A3 /* GameBoard.swift in Sources */,
 				A8094D571B9FC0110016918E /* MainMenu.swift in Sources */,
 				A8094D831BA0C1200016918E /* UserInput.swift in Sources */,
+				A80539431BACB48500FC8626 /* Instructions.swift in Sources */,
 				A8094D551B9FC0110016918E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

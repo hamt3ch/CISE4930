@@ -108,7 +108,7 @@
         <!--Instructions-->
         <scene sceneID="4ch-cv-SOw">
             <objects>
-                <viewController id="00V-7h-TXK" sceneMemberID="viewController">
+                <viewController id="00V-7h-TXK" customClass="Instructions" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FtZ-W3-F19"/>
                         <viewControllerLayoutGuide type="bottom" id="GRD-yf-N3X"/>
@@ -117,28 +117,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tK-t1-dCC">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XxT-81-yEw">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
+                                <mutableString key="text">Tic-tac-toe (also known as Noughts and crosses or Xs and Os) is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="132" y="149" width="126" height="121"/>
+                                    <rect key="frame" x="65" y="145" width="270" height="351.5"/>
                                 </variation>
-                            </label>
+                            </textView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="2tK-t1-dCC"/>
+                                <exclude reference="XxT-81-yEw"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="2tK-t1-dCC"/>
+                                <include reference="XxT-81-yEw"/>
                             </mask>
                         </variation>
                         <connections>
@@ -150,7 +150,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HB0-7d-HA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Dhf-nM-bX3"/>
             </objects>
-            <point key="canvasLocation" x="676.5" y="958.5"/>
+            <point key="canvasLocation" x="411" y="974.25"/>
         </scene>
         <!--User Input-->
         <scene sceneID="F9M-Zv-CgM">
@@ -432,7 +432,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pLF-NQ-FDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1411.5" y="1159.5"/>
+            <point key="canvasLocation" x="1453.5" y="1448.25"/>
         </scene>
         <!--Game Board-->
         <scene sceneID="0Hm-s9-Edu">
@@ -651,6 +651,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Igh-Un-yfa"/>
+        <segue reference="Zj7-tv-Bw5"/>
     </inferredMetricsTieBreakers>
 </document>
