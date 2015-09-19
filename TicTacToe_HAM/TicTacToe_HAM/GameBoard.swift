@@ -14,7 +14,7 @@ import UIKit
 var count = 0
 var content = ["Third":1 , "First" : 5 ,"Second" : 4 ]
 var players = [String]()
-var leaderboard = [String:Int]()
+var leaderboard = [String]()
 
 class GameBoard: UIViewController{
     
@@ -35,6 +35,7 @@ class GameBoard: UIViewController{
     @IBOutlet var Pos7: UIImageView!
     @IBOutlet var Pos8: UIImageView!
     
+    
     let cross : UIImage = UIImage(named:"tic-tac-toe-X")!
     let circle : UIImage = UIImage(named:"tic-tac-toe-O")!
 
@@ -45,87 +46,20 @@ class GameBoard: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        sortDictionaryByKey(content)
+        
+        var positions = [Pos0,Pos1,Pos2,Pos3,Pos4,Pos5,Pos6,Pos7,Pos8]
+        for i in 0 ... 8 {
+            positions[i].userInteractionEnabled = true
+            let tapGuesture = UITapGestureRecognizer()
+            tapGuesture.addTarget(self, action: "tappedView:")
+            positions[i].addGestureRecognizer(tapGuesture)
+        }
+         
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func userPlacedPiece(sender: AnyObject) {
-        let cross : UIImage = UIImage(named:"tic-tac-toe-X")!
-        let circle : UIImage = UIImage(named:"tic-tac-toe-O")!
-        var playerPiece : UIImage
-        
-        if (self.currentUser == "player1"){
-            playerPiece = cross // set piece = X (Player1)
-        }
-        else {
-            playerPiece = circle //set piece = O (Player2)
-        }
-
-        switch(sender.tag){ // parse which button has been touched
-        case 0:
-            if(myBoard[0][0] == "0") { // is spot is empty
-                Pos0.image = playerPiece
-                myBoard[0][0] = self.currentUser
-                tglUser()
-            }
-        case 1:
-           if(myBoard[0][1] == "0") {
-                Pos1.image = playerPiece
-                myBoard[0][1] = self.currentUser
-                tglUser()
-            }
-        case 2:
-            if(myBoard[0][2] == "0") {
-                Pos2.image = playerPiece
-                myBoard[0][2] = self.currentUser
-                tglUser()
-            }
-        case 3:
-            if(myBoard[1][0] == "0") {
-                Pos3.image = playerPiece
-                myBoard[1][0] = self.currentUser
-                tglUser()
-            }
-        case 4:
-            if(myBoard[1][1] == "0") {
-                Pos4.image = playerPiece
-                myBoard[1][1] = self.currentUser
-                tglUser()
-            }
-        case 5:
-            if(myBoard[1][2] == "0") {
-                Pos5.image = playerPiece
-                myBoard[1][2] = self.currentUser
-                tglUser()
-            }
-        case 6:
-            if(myBoard[2][0] == "0") {
-                Pos6.image = playerPiece
-                myBoard[2][0] = self.currentUser
-                tglUser()
-            }
-        case 7:
-            if(myBoard[2][1] == "0") {
-                Pos7.image = playerPiece
-                myBoard[2][1] = self.currentUser
-                tglUser()
-            }
-        case 8:
-            if(myBoard[2][2] == "0") {
-                Pos8.image = playerPiece
-                myBoard[2][2] = self.currentUser
-                tglUser()
-            }
-        default:
-            print("Error in userPlacedPiece")
-        }
-        
-        checkForWinner() // check if game is complete
-        
     }
     
     func tglUser () {
@@ -245,16 +179,7 @@ class GameBoard: UIViewController{
     }
     
     func addToLeaderBoard (thisWinner:String) {
-        if(leaderboard[thisWinner] == nil) { // newWinner
-            leaderboard[thisWinner] = 1
-        }
-
-        else
-        {
-            leaderboard[thisWinner]! += 1
-        }
-        print(leaderboard)
-    
+        leaderboard.append(thisWinner)
     }
     
     func clearBoard() { // reset the game board
@@ -284,4 +209,80 @@ class GameBoard: UIViewController{
         
     }
     
+    func tappedView (sender:UITapGestureRecognizer){
+        let cross : UIImage = UIImage(named:"tic-tac-toe-X")!
+        let circle : UIImage = UIImage(named:"tic-tac-toe-O")!
+        var playerPiece : UIImage
+        
+        if (self.currentUser == "player1"){
+            playerPiece = cross // set piece = X (Player1)
+        }
+        else {
+            playerPiece = circle //set piece = O (Player2)
+        }
+        
+        switch(sender.view!.tag){ // parse which button has been touched
+        case 0:
+            if(myBoard[0][0] == "0") { // is spot is empty
+                Pos0.image = playerPiece
+                myBoard[0][0] = self.currentUser
+                tglUser()
+            }
+        case 1:
+            if(myBoard[0][1] == "0") {
+                Pos1.image = playerPiece
+                myBoard[0][1] = self.currentUser
+                tglUser()
+            }
+        case 2:
+            if(myBoard[0][2] == "0") {
+                Pos2.image = playerPiece
+                myBoard[0][2] = self.currentUser
+                tglUser()
+            }
+        case 3:
+            if(myBoard[1][0] == "0") {
+                Pos3.image = playerPiece
+                myBoard[1][0] = self.currentUser
+                tglUser()
+            }
+        case 4:
+            if(myBoard[1][1] == "0") {
+                Pos4.image = playerPiece
+                myBoard[1][1] = self.currentUser
+                tglUser()
+            }
+        case 5:
+            if(myBoard[1][2] == "0") {
+                Pos5.image = playerPiece
+                myBoard[1][2] = self.currentUser
+                tglUser()
+            }
+        case 6:
+            if(myBoard[2][0] == "0") {
+                Pos6.image = playerPiece
+                myBoard[2][0] = self.currentUser
+                tglUser()
+            }
+        case 7:
+            if(myBoard[2][1] == "0") {
+                Pos7.image = playerPiece
+                myBoard[2][1] = self.currentUser
+                tglUser()
+            }
+        case 8:
+            if(myBoard[2][2] == "0") {
+                Pos8.image = playerPiece
+                myBoard[2][2] = self.currentUser
+                tglUser()
+            }
+        default:
+            print("Error in userPlacedPiece")
+        }
+        
+        checkForWinner() // check if game is complete
+        
+    }
+
+
 }
