@@ -22,7 +22,7 @@ class LeaderBoard: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return players.count
+        return leaderboard.count
     }
     
     public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell

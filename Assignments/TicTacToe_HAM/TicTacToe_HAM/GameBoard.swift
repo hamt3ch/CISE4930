@@ -35,6 +35,14 @@ class GameBoard: UIViewController{
     @IBOutlet var Pos7: UIImageView!
     @IBOutlet var Pos8: UIImageView!
     
+    //PlayerStats
+    @IBOutlet var Player1Lbl: UILabel!
+    @IBOutlet var Player2Lbl: UILabel!
+    @IBOutlet var Player1Score: UILabel!
+    @IBOutlet var Player2Score: UILabel!
+    
+    var score1 : Int = 0
+    var score2 : Int = 0
     
     let cross : UIImage = UIImage(named:"tic-tac-toe-X")!
     let circle : UIImage = UIImage(named:"tic-tac-toe-O")!
@@ -54,7 +62,17 @@ class GameBoard: UIViewController{
             tapGuesture.addTarget(self, action: "tappedView:")
             positions[i].addGestureRecognizer(tapGuesture)
         }
-         
+        
+        Player1Lbl.text = MyUsers.user1
+        Player2Lbl.text = MyUsers.user2
+        
+        score1 = 0
+        score2 = 0
+        
+        Player1Score.text = String(score1)
+        Player2Score.text = String(score2)
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -144,6 +162,17 @@ class GameBoard: UIViewController{
     }
     
     func showWinnerAlert (winner:String) {
+        
+        if(winner == "player1"){ // keeep score
+            score1++
+            Player1Score.text = String(score1)
+        }
+            
+        else if(winner == "player2")
+        {
+            score2++
+            Player2Score.text = String(score2)
+        }
         
         let nameOfWinner = (winner == "player1") ? MyUsers.user1 : MyUsers.user2
         //Log usersWinStreak
